@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="160px" height="160px" viewBox="0 0 160 160" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>新增 copy备份</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="用户列表-导入" transform="translate(-1220.000000, -361.000000)" fill-rule="nonzero">
+            <g id="新增-copy备份" transform="translate(1220.000000, 361.000000)">
+                <rect id="搜索输入框-copy-7" stroke="#3E495E" x="0.5" y="0.5" width="159" height="159" rx="4"></rect>
+                <path d="M80.25,62.4 C81.2441125,62.4 82.05,63.2058875 82.05,64.2 L82.05,78.6 L96.6,78.6 C97.5941125,78.6 98.4,79.4058875 98.4,80.4 C98.4,81.3941125 97.5941125,82.2 96.6,82.2 L82.05,82.199 L82.05,96.6 C82.05,97.5941125 81.2441125,98.4 80.25,98.4 C79.2558875,98.4 78.45,97.5941125 78.45,96.6 L78.45,82.199 L64.2,82.2 C63.2058875,82.2 62.4,81.3941125 62.4,80.4 C62.4,79.4058875 63.2058875,78.6 64.2,78.6 L78.45,78.6 L78.45,64.2 C78.45,63.2058875 79.2558875,62.4 80.25,62.4 Z" id="新建icon-copy-3" fill="#6F7480"></path>
+            </g>
+        </g>
+    </g>
+</svg>

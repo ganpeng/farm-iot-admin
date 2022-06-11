@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="20px" viewBox="0 0 18 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>water1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="表格搜索" transform="translate(-407.000000, -728.000000)">
+            <g id="water1" transform="translate(407.000000, 729.000000)">
+                <g id="矩形_2313" transform="translate(0.500000, 0.000000)">
+                    <path d="M0,0 L17,0 L17,15 C17,16.6568542 15.5839704,18 13.8372093,18 L3.1627907,18 C1.41602963,18 0,16.6568542 0,15 L0,0 Z" id="路径"></path>
+                    <path d="M15.4186047,0.25 L1.58139535,0.25 C1.22812214,0.25 0.909342968,0.387651794 0.678193443,0.606903917 C0.437227568,0.835467136 0.290697674,1.15193208 0.290697674,1.5 L0.290697674,15 C0.290697674,15.7622815 0.614231272,16.4537464 1.14137342,16.9537563 C1.65869921,17.444455 2.37282722,17.75 3.1627907,17.75 L13.8372093,17.75 C14.6271728,17.75 15.3413008,17.444455 15.8586266,16.9537563 C16.3857687,16.4537464 16.7093023,15.7622815 16.7093023,15 L16.7093023,1.5 C16.7093023,1.15193208 16.5627724,0.835467136 16.3218066,0.606903917 C16.090657,0.387651794 15.7718779,0.25 15.4186047,0.25 Z" id="路径" stroke="#9FA8B8"></path>
+                </g>
+                <path d="M0.923095703,10 L17.5,10 L0.923095703,10 Z" id="路径_2341" stroke="#9FA8B8" stroke-linecap="round"></path>
+                <line x1="17" y1="7.5" x2="15" y2="7.5" id="直线_4" stroke="#9FA8B8" stroke-linecap="round"></line>
+                <line x1="17" y1="5.5" x2="15" y2="5.5" id="直线_6" stroke="#9FA8B8" stroke-linecap="round"></line>
+                <line x1="17" y1="12.5" x2="15" y2="12.5" id="直线_2" stroke="#9FA8B8" stroke-linecap="round"></line>
+                <line x1="17" y1="14.5" x2="15" y2="14.5" id="直线_3" stroke="#9FA8B8" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>

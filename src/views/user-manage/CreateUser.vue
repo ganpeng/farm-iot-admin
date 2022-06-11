@@ -1,0 +1,28 @@
+<!-- 创建模型 -->
+<template>
+  <div id="create-model-container">
+    <user-form></user-form>
+  </div>
+</template>
+
+<script>
+  import UserForm from './components/UserForm';
+
+  export default {
+    name: 'create-user',
+    components: {
+      UserForm
+    },
+    data() {
+      return {}
+    }
+  }
+</script>
+
+<style scoped lang="scss">
+
+  #create-model-container {
+    padding: 18px;
+  }
+
+</style>

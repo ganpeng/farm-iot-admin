@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>icon-新增作物</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="企业信息-种植模型-农事计划" transform="translate(-445.000000, -73.000000)">
+            <g id="icon-新增作物" transform="translate(445.000000, 73.000000)">
+                <path d="M11,6 C11.5522847,6 12,6.44771525 12,7 L12,11 L16,11 C16.5522847,11 17,11.4477153 17,12 C17,12.5522847 16.5522847,13 16,13 L11.999,13 L12,17 C12,17.5522847 11.5522847,18 11,18 C10.4477153,18 10,17.5522847 10,17 L9.999,13 L6,13 C5.44771525,13 5,12.5522847 5,12 C5,11.4477153 5.44771525,11 6,11 L10,11 L10,7 C10,6.44771525 10.4477153,6 11,6 Z" id="形状结合" fill="#FFFFFF"></path>
+                <circle id="椭圆形" stroke="#FFFFFF" cx="11" cy="10.5" r="10"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

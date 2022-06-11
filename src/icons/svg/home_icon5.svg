@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="21px" viewBox="0 0 19 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>预警趋势 copy</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="数据概览" transform="translate(-318.000000, -202.000000)">
+            <g id="预警趋势-copy" transform="translate(318.000000, 203.000000)">
+                <g id="icon_warning">
+                    <path d="M9.5,0 C13.7473327,-7.80222363e-16 17.1904762,3.44314347 17.1904762,7.69047619 L17.1904762,15.4545455 L17.1904762,15.4545455 L1.80952381,15.4545455 L1.80952381,7.69047619 C1.80952381,3.44314347 5.25266728,7.80222363e-16 9.5,0 Z" id="矩形备份-6" stroke="#FF7F00" stroke-width="1.584"></path>
+                    <rect id="矩形备份-7" fill="#FF7F00" x="0" y="18.1818182" width="19" height="1.81818182" rx="0.909090909"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,249 @@
+<template>
+  <div class="list-container">
+    <div class="my-search-field">
+      <div class="field-row">
+        <div class="row-left">
+          <div class="search-field-item input-search">
+            <el-input
+              :value="searchField.keyword"
+              placeholder="项目名称"
+              @input="inputHandler($event, 'keyword')"
+            >
+            </el-input>
+            <span @click="searchHandler" class="input-search-btn">
+              <svg-icon class="input-search-btn" icon-class="input_search_btn"/>
+              <svg-icon class="input-search-btn-active" icon-class="input_search_btn_hover"/>
+            </span>
+          </div>
+          <div class="search-field-item">
+            <label class="search-field-item-label">级别</label>
+            <el-select
+              :value="searchField.projectClass"
+              filterable
+              clearable
+              placeholder="全部"
+              @input="inputHandler($event, 'projectClass')"
+            >
+              <el-option
+                v-for="(item, index) in projectClassOptions"
+                :key="index"
+                :label="item.name"
+                :value="item.name"
+              ></el-option>
+            </el-select>
+          </div>
+          <div class="search-field-item">
+            <label class="search-field-item-label">状态</label>
+            <el-select
+              :value="searchField.projectStage"
+              filterable
+              clearable
+              placeholder="全部"
+              @input="inputHandler($event, 'projectStage')"
+            >
+              <el-option
+                v-for="(item, index) in projectStageOptions"
+                :key="index"
+                :label="item.name"
+                :value="item.name"
+              ></el-option>
+            </el-select>
+          </div>
+          <div @click="clearSearchField" class="clear-btn">
+            <span class="reset-icon">
+              <svg-icon class="reset-btn" icon-class="reset_btn"/>
+              <svg-icon class="reset-btn-active" icon-class="reset_btn_active"/>
+            </span>
+              重置
+          </div>
+        </div>
+        <div class="row-right">
+          <el-button class="btn-style-two contain-svg-icon" @click="createGovernmentProject">
+            <svg-icon icon-class="add_plus"/>添加
+          </el-button>
+        </div>
+      </div>
+    </div>
+    <div class="tabel-field">
+      <el-table
+        header-row-class-name="common-table-header"
+        size="small"
+        :row-class-name="tableRowClassName"
+        class="my-table-style"
+        :data="list.data"
+      >
+        <el-table-column min-width="100px" label="项目名称">
+          <template slot-scope="scope">
+            <span @click="showDetailHandler(scope.row)" class="ellipsis two name detail-name">{{scope.row.projectName}}</span>
+          </template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="项目归属部门">
+          <template slot-scope="scope">{{scope.row.belongDepartment}}</template>
+        </el-table-column>
+        <el-table-column min-width="100px" label="级别">
+          <template slot-scope="scope">{{scope.row.projectClass}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="项目总额(元)">
+          <template slot-scope="scope">{{scope.row.projectTotal}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="政府拨款(元)">
+          <template slot-scope="scope">{{scope.row.appropriation}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="项目负责人">
+          <template slot-scope="scope">{{scope.row.projectManager}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="负责人电话">
+          <template slot-scope="scope">{{scope.row.managerTel}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="状态">
+          <template slot-scope="scope">{{scope.row.projectStage}}</template>
+        </el-table-column>
+        <el-table-column min-width="120px" label="到账金额(元)">
+          <template slot-scope="scope">{{scope.row.accountTotal}}</template>
+        </el-table-column>
+        <el-table-column width="120px" label="操作">
+          <template slot-scope="scope">
+            <div class="operator-btn-wrapper">
+              <span class="btn-text" @click="editGovernmentProjectHandler(scope.row)">编辑</span>
+              <span class="btn-text text-danger" @click="deleteGovernmentProjectHandler(scope.row.id)">删除</span>
+            </div>
+          </template>
+        </el-table-column>
+      </el-table>
+    </div>
+    <el-pagination
+      @size-change="handlePaginationChange($event, 'pageSize')"
+      @current-change="handlePaginationChange($event, 'pageNum')"
+      :current-page="list.pagination.pageNum"
+      :page-sizes="[10, 30, 50,100, 200, 500]"
+      :page-size="list.pagination.pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="list.pagination.total"
+    ></el-pagination>
+    <government-project-dialog ref="governmentProjectDialog"></government-project-dialog>
+    <government-project-detail-dialog ref="governmentProjectDetailDialog"></government-project-detail-dialog>
+  </div>
+</template>
+<script>
+import { mapGetters, mapMutations, mapActions } from "vuex";
+import _ from "lodash";
+import GovernmentProjectDialog from "./GovernmentProjectDialog";
+import GovernmentProjectDetailDialog from './GovernmentProjectDetailDialog';
+import constants from '@/util/constants';
+export default {
+  name: "ManageMemberList",
+  components: { GovernmentProjectDialog, GovernmentProjectDetailDialog },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters({
+      list: "governmentProject/list",
+      searchField: "governmentProject/searchField",
+      dict: 'dict/dict'
+    }),
+    projectClassOptions() {
+      return this.dict.classType || [];
+    },
+    projectStageOptions() {
+      return this.dict.stageType || [];
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener('keyup', this.keyupHandler);
+  },
+  async created() {
+    try {
+      this.resetSearchField();
+      this.resetPagination();
+      let { id } = this.$route.params;
+      await this.getGovernmentProjectList(id);
+      // 绑定事件
+      window.addEventListener('keyup', this.keyupHandler);
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  methods: {
+    ...mapMutations({
+      updateSearchField: "governmentProject/updateSearchField",
+      updatePagination: "governmentProject/updatePagination",
+      resetSearchField: "governmentProject/resetSearchField",
+      resetPagination: "governmentProject/resetPagination",
+      setCurrentGovernmentProject: "governmentProject/setCurrentGovernmentProject",
+      resetCurrentGovernmentProject: "governmentProject/resetCurrentGovernmentProject"
+    }),
+    ...mapActions({
+      getGovernmentProjectList: "governmentProject/getGovernmentProjectList",
+      deleteGovernmentProjectById: "governmentProject/deleteGovernmentProjectById"
+    }),
+    keyupHandler(e) {
+      if (e.keyCode === 13) {
+        this.searchHandler();
+      }
+    },
+    inputHandler(value, key) {
+      this.updateSearchField({ key, value });
+      if (key !== 'keyword') {
+        this.searchHandler();
+      }
+    },
+    searchHandler() {
+      let { id } = this.$route.params;
+      this.getGovernmentProjectList(id);
+    },
+    clearSearchField() {
+      this.resetSearchField();
+      this.searchHandler();
+    },
+    handlePaginationChange(value, key) {
+      this.updatePagination({ key, value });
+      this.searchHandler();
+    },
+    tableRowClassName({ rowIndex }) {
+      if (rowIndex % 2 === 0) {
+        return "warning-row";
+      } else {
+        return "success-row";
+      }
+    },
+    async createGovernmentProject() {
+      try {
+        this.resetCurrentGovernmentProject();
+        this.$refs.governmentProjectDialog.show();
+      } catch (err) {
+        console.log(err);
+      }
+    },
+    showDetailHandler(governmentProject) {
+      this.setCurrentGovernmentProject({governmentProject});
+      this.$refs.governmentProjectDetailDialog.show();
+    },
+    editGovernmentProjectHandler(governmentProject) {
+      let {id} = governmentProject;
+      this.setCurrentGovernmentProject({governmentProject});
+      this.$refs.governmentProjectDialog.show(id);
+    },
+    async deleteGovernmentProjectHandler(id) {
+      try {
+        let confirm = await this.$confirm("你确定要删除吗, 是否继续?", "提示", {
+          confirmButtonText: "确定",
+          cancelButtonText: "取消",
+          type: "warning"
+        });
+        if (confirm) {
+          let res = await this.deleteGovernmentProjectById(id);
+          if (res && res.code === 0) {
+            let {id} = this.$route.params;
+            this.getGovernmentProjectList(id);
+          }
+        }
+      } catch (err) {
+        console.log(err);
+      }
+    }
+  }
+};
+</script>
+<style lang="scss" scoped>
+</style>

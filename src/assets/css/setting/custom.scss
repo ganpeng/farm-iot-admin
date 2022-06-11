@@ -1,0 +1,2153 @@
+// body全局样式
+html, body {
+  width: 100%;
+  min-width: 1440px;
+  height: 100%;
+  color: #A8ABB3;
+  font-size: 14px;
+  font-family: MicrosoftYaHei, PingFangSC-Regular, PingFang SC;
+}
+
+// 清除浮动
+.clearfix {
+  overflow: hidden;
+}
+
+// 手形样式
+.pointer {
+  cursor: pointer;
+}
+
+//  内容区域的title样式
+.content-title {
+  font-size: 24px;
+  color: #6F7480;
+  text-align: left;
+  margin: 20px 0 10px 0;
+}
+
+//  内容区域小点的title
+.content-sub-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(168, 171, 179, 1);
+  margin: 20px 0;
+  text-align: left;
+}
+
+.text-success {
+  color: $successColor;
+}
+
+//  统一处理必填项提示的小星号
+.el-form-item.is-required > .el-form-item__label {
+  &:after {
+    content: '*';
+    color: #f56c6c;
+    margin-right: 4px;
+    line-height: 18px;
+  }
+
+  &::before {
+    content: '' !important;
+  }
+}
+
+//  表格每一行hover之后改变背景色
+.el-table--enable-row-hover .el-table__body tr:hover > td {
+  background-color: transparent;
+}
+
+// 2.0弹窗样式
+.normal-dialog {
+  position: relative;
+  background: rgba(27, 42, 65, 1);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(99, 116, 151, 1);
+  height: 860px;
+  // 数据下载弹窗
+  &.download-dialog {
+    height: 359px;
+    width: 1000px;
+  }
+  // 简单数据框
+  &.simple-dialog {
+    height: 290px;
+    &.password-modify {
+      height: 357px;
+    }
+    .el-dialog__body {
+      padding-top: 20px;
+    }
+    .operate-block {
+      margin-top: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 400;
+        cursor: pointer;
+        &.confirm-btn {
+          margin-right: 30px;
+          background: rgba(38, 146, 255, 1);
+          color: rgba(255, 255, 255, 1);
+        }
+        &.cancel-btn {
+          background: rgba(255, 255, 255, 1);
+          color: rgba(25, 137, 250, 1);
+        }
+      }
+    }
+  }
+  .el-dialog__header {
+    padding: 0px;
+    height: 50px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    line-height: 55px;
+    background: rgba(20, 33, 56, 1);
+    text-align: center;
+
+    .el-dialog__title {
+      font-size: 16px;
+      color: rgba(168, 171, 179, 1);
+    }
+
+    .el-dialog__headerbtn {
+      top: 16px;
+      font-size: 15px;
+
+      .el-dialog__close {
+        color: #C35757;
+
+        &:hover {
+          color: #D0021B;
+        }
+      }
+    }
+  }
+  // 表格样式
+  .el-table.row-table {
+    .odd-row {
+      background: rgba(12, 27, 49, 1);
+    }
+    .even-row {
+      background: rgba(18, 34, 57, 1);
+    }
+  }
+  .el-table .el-table__header tr, .el-table .el-table__header th {
+    background: rgba(9, 25, 46, 1);
+  }
+  .el-dialog__footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    background: rgba(27, 42, 65, 1);
+    border-top: 1px solid rgba(53, 65, 87, 1);
+    padding-top: 20px;
+    .el-button {
+      width: 100px;
+      height: 40px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      &.modify-btn {
+        margin-right: 20px;
+        border: 1px solid rgba(203, 224, 255, 1);
+        font-size: 16px;
+        font-weight: 400;
+        color: rgba(232, 241, 255, 1);
+        background: transparent;
+        &:hover {
+          border: 1px solid rgba(0, 103, 172, 1);
+          color: rgba(64, 147, 202, 1);
+        }
+      }
+      &.create-btn {
+        border: none;
+        background: rgba(38, 146, 255, 1);
+        &:hover, &:focus {
+          background: rgba(15, 112, 243, 1);
+        }
+      }
+    }
+  }
+
+}
+
+/** 2.0列表筛选参数样式 */
+.filters-container {
+  background: rgba(32, 44, 65, 1);
+  border-radius: 4px;
+
+  .filter-form {
+    position: relative;
+    padding: 17px 22px 17px 20px;
+    text-align: left;
+
+    // 重置按钮
+    .reset-btn {
+      margin-left: 10px;
+      padding: 0 12px;
+      width: 66px;
+      height: 26px;
+      border-radius: 2px;
+      border: 1px solid rgba(62, 73, 94, 1);
+      background: transparent;
+      min-width: auto;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        border: 1px solid rgba(0, 103, 172, 1);
+
+        span {
+          color: rgba(64, 147, 202, 1);
+
+          .svg-icon {
+            width: 13px;
+            height: 13px;
+            margin-right: 2px;
+
+            &.svg-icon-reset_filter_active {
+              display: inline-block;
+            }
+
+            &.svg-icon-reset_filter_normal {
+              display: none;
+            }
+          }
+        }
+      }
+
+      .svg-icon {
+        width: 13px;
+        height: 13px;
+        margin-right: 2px;
+
+        &.svg-icon-reset_filter_active {
+          display: none;
+        }
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 14px;
+        color: rgba(159, 168, 184, 1);
+      }
+    }
+
+    .el-form-item {
+      margin-right: 20px;
+      margin-bottom: 0px;
+      display: inline-flex;
+      flex-direction: row;
+      align-items: center;
+
+      .el-form-item__content {
+        line-height: 26px;
+      }
+
+      &:first-child {
+        margin-right: 30px;
+      }
+    }
+
+    .el-form-item__label {
+      font-size: 14px;
+      height: 26px;
+      line-height: 26px;
+    }
+
+    .el-input {
+      height: 26px;
+    }
+
+    .el-select {
+      width: 108px;
+
+      input:hover {
+        border: 1px solid #0067AC;
+        &:focus {
+          border: 1px solid #2EABFF;
+        }
+      }
+      input:focus {
+        border: 1px solid #2EABFF;
+      }
+
+      .el-input__suffix {
+        .el-input__icon {
+          height: 27px;
+          line-height: 27px;
+        }
+      }
+    }
+
+    .el-input-group--append {
+      position: relative;
+
+      .el-input-group__append {
+        left: -25px;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+      }
+    }
+
+    .el-input.border-input input {
+      width: 170px;
+      border: 1px solid #3E495E;
+      color: white;
+      font-size: 12px;
+
+      &:focus {
+        border: 1px solid #2EABFF;
+      }
+
+      &:hover {
+        border: 1px solid #0067AC;
+
+        &:focus {
+          border: 1px solid #2EABFF;
+        }
+      }
+    }
+
+    .keyword-input {
+      .el-input__inner {
+        padding-right: 30px;
+      }
+    }
+
+    .el-input__inner {
+      height: 26px !important;
+      line-height: 26px;
+    }
+
+    .el-select__tags {
+      margin-top: 4px;
+    }
+
+    .el-form-item__content {
+      height: 27px;
+    }
+
+    .more-filters {
+      position: relative;
+      left: -5px;
+      width: 72px;
+      min-width: 72px;
+      font-size: 12px;
+      color: #6F7480;
+
+      &.active {
+        color: #1989FA;
+
+        i {
+          color: #1989FA;
+        }
+      }
+
+      i {
+        margin-left: 2px;
+      }
+    }
+
+    .el-select .el-input .el-select__caret {
+      &.el-icon-arrow-up {
+        color: #6F7480;
+      }
+    }
+
+    //  时间选择器
+    .el-date-editor--daterange.el-input, .el-date-editor--daterange.el-input__inner, .el-date-editor--timerange.el-input, .el-date-editor--timerange.el-input__inner {
+      width: 240px;
+
+      &:hover {
+        border: 1px solid rgba(0, 103, 172, 1);
+
+        &:focus {
+          border: 1px solid rgba(46, 171, 255, 1);
+        }
+      }
+
+      input {
+        color: rgba(240, 240, 240, 1);
+        font-size: 12px;
+      }
+
+      .el-range-separator {
+        font-size: 12px;
+        margin-right: 12px;
+      }
+    }
+
+    .el-date-editor .el-icon-date, .el-range-editor .el-icon-date {
+      display: block;
+    }
+  }
+  .el-autocomplete {
+    width: 108px;
+  }
+}
+
+//  表格样式
+.el-table {
+  &.my-table-style {
+    margin: 0;
+    margin-bottom: 20px;
+    .inactive {
+      color: #9B9B9B;
+    }
+    &.el-table--enable-row-hover {
+      .el-table__body-wrapper {
+        tbody {
+          .el-table__row {
+           td.el-table__cell {
+              background-color: transparent!important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &.row-table {
+    .odd-row {
+      background: rgba(32, 44, 65, 1);
+    }
+    .even-row {
+      background: rgba(33, 47, 70, 1);
+    }
+  }
+  .cell {
+    box-sizing: border-box;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  &::before {
+    background-color: #343d4f;
+  }
+
+  .el-checkbox {
+    padding: 0;
+
+    .el-checkbox__inner {
+      border: 1px solid #475163;
+      background-color: #203046;
+    }
+
+    &.is-checked {
+      .el-checkbox__inner {
+        border: 1px solid $mainColor;
+        background-color: $mainColor;
+      }
+    }
+  }
+  // 表格header
+  .el-table__header {
+    .common-table-header {
+      height: 52px;
+    }
+    tr, th {
+      background: #202C41;
+    }
+    th {
+      border-bottom: none!important;
+      padding-left: 10px;
+      .cell {
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(159, 168, 184, 1);
+        line-height: 14px;
+      }
+    }
+  }
+  // 表格header结束
+  .el-table__body-wrapper .el-table__empty-block {
+    background: rgba(33, 47, 70, 1);
+  }
+  .el-table__body {
+    th {
+      background: #202C41;
+      padding: 0;
+      padding-left: 10px;
+      .cell {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 12px;
+      }
+    }
+    tr {
+      height: 50px;
+      background: #202C41;
+      &.warning-row {
+        background: #212F46;
+      }
+      &.success-row {
+        background: #202C41;
+      }
+    }
+    td {
+      border-bottom: none;
+      padding: 0;
+      padding-left: 10px;
+      .detail-name {
+        color: #2EABFF;
+        cursor: pointer;
+        &:hover {
+          color: #88C3FF;
+        }
+      }
+      .contact-name {
+        color: #8AB9E8;
+        cursor: pointer;
+      }
+      .cell {
+        box-orient: vertical;
+        font-weight: 400;
+        color: #F0F0F0;
+        font-size: 12px;
+      }
+    }
+  }
+  .el-table__empty-block {
+    background: #2a3040;
+  }
+  .checked {
+    background: #000 !important;
+  }
+  //  表格操作按钮的样式
+  .operator-btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    .btn-text {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(46, 171, 255, 1);
+      cursor: pointer;
+      &.disabled {
+        opacity: 0.3;
+      }
+      &:hover {
+        color: rgba(136, 195, 255, 1);
+      }
+      &.text-danger {
+        color: rgba(220, 74, 81, 1);
+        &:hover {
+          color: rgba(239, 104, 104, 1);
+        }
+      }
+      &.text-normal {
+        color: $successColor;
+      }
+      &.not-allowed {
+        cursor: not-allowed;
+        opacity: 0.3;
+      }
+    }
+    .btn-text + .btn-text {
+      margin-left: 12px;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+// 2.0 使form表单中的每个item左对齐
+.form-block {
+  &.el-form {
+    .el-form-item.is-success .el-input__inner, .el-form-item.is-success .el-input__inner:focus, .el-form-item.is-success .el-textarea__inner, .el-form-item.is-success .el-textarea__inner:focus {
+      border-color: rgba(62, 73, 94, 1);
+    }
+    .el-input__icon {
+      height: 30px;
+      line-height: 30px;
+    }
+    .el-form-split-block {
+      margin-bottom: 14px;
+      &.simple-big-margin {
+        margin-top: 24px;
+      }
+      &.radio-block {
+        .el-form-item__label {
+          padding-right: 20px;
+        }
+      }
+      &.big-margin {
+        margin-top: 20px;
+        margin-bottom: 0;
+        .el-form-item__label {
+          padding-right: 20px;
+          line-height: 30px;
+        }
+      }
+      .el-form-item__content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(168, 171, 179, 1);
+        .range-input {
+          .el-input__inner {
+            width: 126px;
+          }
+        }
+        .el-input {
+          &.captcha {
+            width: 160px;
+            .el-input__inner {
+              width: 160px;
+            }
+          }
+        }
+        .el-input__inner {
+          padding: 0 30px 0 10px;
+          width: 240px;
+          height: 30px;
+          line-height: 30px;
+          font-size: 12px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 1);
+          &::-webkit-input-placeholder {
+            font-size: 12px;
+            font-weight: 400;
+            color: rgba(159, 168, 184, 1);
+          }
+        }
+      }
+      .el-textarea {
+        width: 240px;
+        textarea {
+          padding: 5px 10px;
+        }
+      }
+      .el-form-item__label {
+        padding-right: 29px;
+        line-height: 14px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(168, 171, 179, 1);
+      }
+    }
+  }
+
+  .el-select {
+    input:hover {
+      border: 1px solid #0067AC;
+      &:focus {
+        border: 1px solid #2EABFF;
+      }
+    }
+    input:focus {
+      border: 1px solid #2EABFF;
+    }
+  }
+
+  .el-input input {
+    border-color: #3E495E;
+
+    &:focus {
+      border-color: #2EABFF;
+    }
+
+    &:hover {
+      border-color: #0067AC;
+
+      &:focus {
+        border-color: #2EABFF;
+      }
+    }
+  }
+
+  .unit {
+    height: 30px;
+    line-height: 40px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #6F7480;
+  }
+}
+
+//  分页的样式修改
+.el-pagination {
+  text-align: right;
+  .el-select {
+    .el-input {
+      .el-input__inner {
+        color: #6F7480;
+        background-color: transparent;
+        border-radius: 3px;
+      }
+    }
+  }
+  .el-pagination__jump {
+    .el-input {
+      .el-input__inner {
+        color: #6F7480;
+        background-color: transparent;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  button {
+    &.btn-prev, &.btn-next {
+      background-color: transparent;
+      color: #606266;
+    }
+
+    &:disabled {
+      color: #6F7480;
+    }
+  }
+
+  .el-pager {
+    li.number {
+      background: transparent;
+      color: #595c61;
+
+      &.active {
+        color: #409EFF;
+        cursor: default;
+      }
+    }
+
+    li.more.btn-quicknext, li.more.btn-quickprev {
+      color: #595c61;
+      background: transparent;
+    }
+  }
+}
+
+//  按钮样式重写
+.fixed-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-30%);
+  width: 500px;
+  height: 80px;
+  background: #293550;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.20);
+  border-radius: 2px;
+  z-index: 100;
+  .el-button {
+    margin-right: 20px;
+    font-weight: 400;
+    &.btn-style-two {
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+  .reject-status-btn {
+    width: 100px;
+    height: 40px;
+  }
+}
+
+.el-button {
+  min-width: 100px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 20px;
+  //  按钮样式一
+  &.btn-style-one {
+    height: 34px;
+    line-height: 34px;
+    color: $btnText;
+    border: 1px solid #64A4E5;
+    background: transparent;
+
+    &:hover {
+      background: #4987C6;
+      border: 1px solid #4987C6;
+    }
+
+    .svg-icon {
+      fill: $btnText;
+    }
+  }
+
+  //  按钮样式二
+  &.btn-style-two {
+    height: 26px;
+    line-height: 26px;
+    font-size: 12px;
+    color: #DAEDFF;
+    background: #2692FF;
+    border: none;
+    &.edit-bottom-btn {
+      height: 40px;
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+    }
+    &.big {
+      width: 130px;
+    }
+    &:hover {
+      background: #0F70F3;
+    }
+    &.btn130 {
+      min-width: 130px;
+    }
+  }
+
+  //  按钮样式三
+  &.btn-style-three {
+    height: 40px;
+    line-height: 40px;
+    background: #FFFFFF;
+    color: #1989FA;
+    border-radius: 20px;
+    border: none;
+
+    &:hover {
+      background: #CCCCCC;
+    }
+  }
+
+  //  按钮样式四
+  &.btn-style-four {
+    width: 130px;
+    height: 34px;
+    line-height: 34px;
+    color: $btnText;
+    background: $mainBtn;
+    border: none;
+
+    &.min {
+      width: 70px;
+      min-width: 70px;
+    }
+
+    &:hover {
+      background: $mainBtnHover;
+    }
+
+    .svg-icon {
+      fill: $btnText;
+    }
+  }
+
+  //  按钮样式五
+  &.btn-style-five {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    color: $btnText;
+    background: $mainBtn;
+    border: none;
+    min-width: 0;
+
+    &:hover {
+      background: $mainBtnHover;
+    }
+
+    span {
+      display: inherit;
+    }
+
+    .svg-icon {
+      fill: $btnText;
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  //  按钮样式六
+  &.btn-style-six {
+    padding: 0px 17px;
+    height: 34px;
+    line-height: 26px;
+    color: $btnText;
+    background: $mainBtn;
+    border: none;
+
+    &:hover {
+      background: $mainBtnHover;
+    }
+
+    .svg-icon {
+      height: 18px !important;
+      width: 18px !important;
+      margin-right: 15px;
+      fill: $btnText;
+    }
+  }
+
+  &.el-button--text {
+    font-size: 14px;
+  }
+
+  & + .el-button {
+    margin-left: 8px;
+  }
+}
+
+.delete-btn {
+  &.one {
+    cursor: pointer;
+
+    .svg-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+//  自定义input输入框
+//  此处覆盖element-ui的样式
+.el-form-item.is-success .el-input__inner,
+.el-form-item.is-success .el-input__inner:focus,
+.el-form-item.is-success .el-textarea__inner,
+.el-form-item.is-success .el-textarea__inner:focus {
+  border-color: #3AC26F;
+}
+
+.el-form-item.is-error .el-input__inner,
+.el-form-item.is-error .el-input__inner:focus,
+.el-form-item.is-error .el-textarea__inner,
+.el-form-item.is-error .el-textarea__inner:focus,
+.el-message-box__input input.invalid,
+.el-message-box__input input.invalid:focus {
+  border-color: #C35757;
+}
+
+.el-textarea__inner {
+  color: #fff;
+  font-size: 12px;
+  border: 1px solid #3E495E;
+  background-color: transparent;
+
+  &::-webkit-input-placeholder {
+    color: #9FA8B8;
+    font-size: 12px;
+  }
+}
+
+// 时间日期选择器样式重写
+.el-date-editor,
+.el-range-editor {
+  border: 1px solid #3E495E;
+  border-radius: 2px;
+  input.el-input__inner {
+    padding-left: 10px;
+    border: none;
+
+    &:disabled {
+      border: none;
+    }
+  }
+  .el-icon-date {
+    display: none;
+  }
+  .el-input__icon {
+    color: #6F7480;
+    line-height: 34px;
+  }
+  &:hover {
+    .el-range-input {
+      color: #6F7480;
+    }
+  }
+  .el-range-input {
+    width: 42%;
+    color: #fff;
+    font-size: 12px;
+    &::-webkit-input-placeholder {
+      color: #9FA8B8;
+    }
+  }
+  .el-range-separator {
+    width: 8%;
+    height: 32px;
+    color: #6F7480;
+  }
+}
+
+// 时间选择器下拉样式
+.el-time-panel {
+  background: rgba(65, 74, 93, 0.90);
+  border: 0 solid #637497;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.30);
+  border-radius: 2px;
+
+  .el-time-panel__content {
+    .el-time-spinner__item {
+      font-size: 14px;
+      color: #A8ABB3;
+
+      &:hover {
+        background: #333B4E;
+      }
+
+      &.active {
+        font-size: 16px;
+        color: #FFFFFF;
+
+        &:hover {
+          background: none;
+        }
+      }
+    }
+
+    &::before, &::after {
+      border-top: 1px solid #637497;
+      border-bottom: 1px solid #637497;
+    }
+  }
+
+  .el-time-panel__footer {
+    border-top: 1px solid #637497;
+
+    .el-time-panel__btn {
+      &.cancel {
+        font-size: 14px;
+        color: #A8ABB3;
+      }
+
+      &.confirm {
+        font-size: 14px;
+        color: #1989FA;
+      }
+    }
+  }
+}
+
+.el-button {
+  &.preview-btn {
+    margin-left: 15px;
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: rgba(38, 146, 255, 1);
+    min-width: auto;
+    border: none;
+
+    &:hover, &:focus {
+      background: rgba(15, 112, 243, 1);
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: 400;
+      color: rgba(218, 237, 255, 1);
+    }
+  }
+  &.filter-add-btn {
+    margin-left: 15px;
+    width: 66px;
+    height: 26px;
+    background: rgba(38, 146, 255, 1);
+    border-radius: 13px;
+    min-width: auto;
+    border: none;
+
+    &:hover, &:focus {
+      background: rgba(15, 112, 243, 1);
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(218, 237, 255, 1);
+
+      .svg-icon {
+        width: 10px;
+        height: 10px;
+        vertical-align: 0;
+      }
+    }
+  }
+}
+
+// 添加项目btn
+.add-item-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 40px;
+  margin-left: 100px;
+  width: 80px;
+  height: 30px;
+  background: rgba(38, 146, 255, 1);
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(218, 237, 255, 1);
+  border: none;
+  cursor: pointer;
+  &:hover {
+    color: rgba(218, 237, 255, 1);
+    .svg-icon {
+      &:first-child {
+        display: none;
+      }
+      &:last-child {
+        display: block;
+      }
+    }
+  }
+  .svg-icon {
+    margin-right: 2px;
+    height: 10px;
+    width: 10px;
+    &:first-child {
+      display: block;
+    }
+    &:last-child {
+      display: none;
+    }
+  }
+}
+
+//  弹出框的小箭头的样式重写
+.el-popper[x-placement^=bottom] .popper__arrow {
+  display: none;
+  border-bottom-color: rgba(65, 74, 93, 0.90);
+}
+
+.el-popper[x-placement^=bottom] .popper__arrow::after {
+  display: none;
+  border-bottom-color: rgba(65, 74, 93, 0.90);
+}
+
+.el-dropdown-menu.el-popper {
+  .popper__arrow::after {
+    border-top-color: transparent;
+  }
+}
+
+//  时间日期选择器弹出框部分样式重写
+.el-picker-panel {
+  background: rgba(65, 74, 93, 0.90);
+  border: none;
+  color: #fff;
+
+  .el-date-table th {
+    color: #909399;
+    border-bottom: solid 1px #637497;
+  }
+
+  .el-date-table td.next-month, .el-date-table td.prev-month {
+    color: #637497;
+  }
+
+  .el-date-table td.today span {
+    color: $mainColor;
+  }
+
+  .el-date-table td.current:not(.disabled) span {
+    color: #fff;
+    background: $mainColor;
+  }
+
+  .el-date-table td.in-range div,
+  .el-date-table td.in-range div:hover,
+  .el-date-table.is-week-mode .el-date-table__row.current div,
+  .el-date-table.is-week-mode .el-date-table__row:hover div {
+    background: rgba(75, 165, 255, 0.20);
+  }
+
+  .el-date-range-picker__content.is-left {
+    border-right: 1px solid #909399;
+  }
+
+  .el-picker-panel__icon-btn {
+    color: #909399;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+  .el-picker-panel__footer {
+    background-color: transparent;
+    .el-picker-panel__link-btn {
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+}
+
+//  form表单相关的样式重写
+.el-form-item__label {
+  font-size: 16px;
+  color: #6F7480;
+}
+
+.el-input__inner {
+  background: transparent;
+
+  :focus {
+    background: transparent;
+  }
+}
+
+.el-input {
+  input {
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #3E495E;
+    &:focus {
+      border: 1px solid #2EABFF;
+    }
+
+    &:hover {
+      border: 1px solid #0067AC;
+
+      &:focus {
+        border: 1px solid #2EABFF;
+      }
+    }
+
+    &[disabled] {
+      &::-webkit-input-placeholder {
+        color: #6F7480 !important;
+      }
+    }
+
+    &::-webkit-input-placeholder {
+      color: #6F7480;
+    }
+  }
+
+  // 自定义下边框输入框
+  &.border-input {
+    input {
+      // width: 200px;
+      height: 34px;
+      background: transparent;
+      border-radius: 0px;
+      border: none;
+      font-size: 14px;
+      color: #A3D0FD;
+      border-bottom: 1px solid #3E495E;
+
+      &:focus {
+        border-bottom: 1px solid #1989FA;
+      }
+
+      &::-webkit-input-placeholder {
+        color: #9FA8B8;
+      }
+    }
+  }
+
+  &.is-disabled {
+    .el-input__inner {
+      background-color: transparent;
+      border: 1px solid #3E495E;
+    }
+  }
+}
+
+//  下拉选择框样式重写
+.el-select-dropdown.el-popper {
+  border: 1px solid #637497;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.30);
+  border-radius: 2px;
+  overflow: hidden;
+
+  .el-scrollbar {
+    background: rgba(65, 74, 93, 0.90);
+  }
+
+  .el-select-dropdown__wrap.el-scrollbar__wrap {
+    border: none;
+
+    .el-select-dropdown__item {
+      height: 20px;
+      line-height: 20px;
+      color: #D8D8D8;
+      background: transparent;
+      span {
+        font-size: 12px;
+        font-weight: 400;
+      }
+
+      &:hover {
+        color: #fff;
+        background: $mainColor;
+      }
+    }
+  }
+
+  .el-select-dropdown__empty {
+    font-size: 12px;
+    color: #D8D8D8;
+    background: rgba(65, 74, 93, 0.90);
+  }
+
+  .popper__arrow {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.el-dropdown-menu.el-popper li.el-dropdown-menu__item {
+  background: transparent;
+
+  &:hover {
+    color: #fff;
+    background: $mainColor;
+  }
+}
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected {
+  color: #fff;
+  background: $mainColor;
+
+  &:hover {
+    color: #D8D8D8;
+    background: rgba(65, 74, 93, 0.90);
+  }
+}
+
+//  人物搜索的弹出框的样式覆盖
+.el-autocomplete-suggestion.el-popper {
+  background: rgba(65, 74, 93, 0.90);
+  border: 1px solid #637497;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.30);
+  border-radius: 2px 0px 0px 0px 4px 4px 4px;
+
+  .el-autocomplete-suggestion__wrap.el-scrollbar__wrap {
+    border: none;
+    background: rgba(65, 74, 93, 0.90);
+    padding: 6px 0;
+
+    li {
+      color: #D8D8D8;
+      background: rgba(65, 74, 93, 0.90);
+      line-height: 20px;
+      font-size: 12px;
+
+      &:hover {
+        color: #fff;
+        background: $mainColor;
+      }
+    }
+  }
+
+  .popper__arrow {
+    display: none;
+  }
+}
+
+//  自定义分割线
+.seperator-line {
+  width: 100%;
+  height: 0px;
+  border-bottom: 1px solid #3E495E;
+}
+
+.el-dropdown {
+  &.is-disabled {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+
+  &.my-dropdown {
+    display: flex;
+    align-items: center;
+    width: 90px;
+    height: 26px;
+    line-height: 28px;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #9FA8B8;
+    border: 1px solid #3E495E;
+    border-radius: 2px;
+    cursor: pointer;
+    &:hover {
+      border-color: #0067AC;
+    }
+    &:focus {
+      border-color: #2EABFF;
+    }
+    &.disabled {
+      opacity: 0.4;
+      cursor: default;
+      border-color: #3E495E;
+    }
+  }
+}
+
+.el-dropdown-menu.el-popper {
+  border: 1px solid #637497;
+  background: rgba(65, 74, 93, 0.90);
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.30);
+  border-radius: 2px;
+  overflow: hidden;
+
+  li {
+    color: #D8D8D8;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    background: rgba(65, 74, 93, 0.90);
+
+    &:hover {
+      color: #fff;
+      background: $mainColor;
+    }
+  }
+}
+
+//  switch开关样式重写
+.my-switch {
+  width: 40px;
+  height: 14px;
+  position: relative;
+  border: 1px solid #6F7480;
+  background-color: #6F7480;
+  box-shadow: #6F7480 0 0 0 0 inset;
+  border-radius: 14px;
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+
+  &:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: -3px;
+    left: -2px;
+    border-radius: 18px;
+    background-color: #A3D0FD;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+
+  &:checked {
+    border-color: #3AC26F;
+    box-shadow: #3AC26F 0 0 0 16px inset;
+    background-color: #3AC26F;
+  }
+
+  &:checked:before {
+    left: 22px;
+  }
+
+  &.switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+
+    &:before {
+      transition: left 0.3s;
+    }
+
+    :checked {
+      box-shadow: #3AC26F 0 0 0 16px inset;
+      background-color: #3AC26F;
+      transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+  }
+}
+
+// 上下架文字样式定义
+.on-the-shelf {
+  display: block;
+  color: #3AC26F;
+  font-size: 14px;
+
+  &.inline {
+    display: inline-block;
+    margin-left: 8px;
+  }
+}
+
+.off-the-shelf {
+  display: block;
+  color: #6F7480;
+  font-size: 14px;
+
+  &.inline {
+    display: inline-block;
+    margin-left: 8px;
+  }
+}
+
+// 节目和人物详情页面的公共样式
+.common-details {
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+  .info-section {
+    flex: 1;
+
+    .title-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      line-height: 50px;
+
+      .left-side {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .right-wrapper {
+        display: flex;
+        align-items: center;
+
+        .btn-group-wrapper {
+          margin-right: 40px;
+
+          .el-button {
+            width: 120px;
+            height: 34px;
+            line-height: 34px;
+          }
+        }
+      }
+
+      .title {
+        display: flex;
+        color: #fff;
+        font-size: 20px;
+        height: 44px;
+        line-height: 44px;
+      }
+
+      .release-at {
+        font-size: 16px;
+        color: #6F7480;
+        margin: 0 20px;
+      }
+
+      .score {
+        display: inline-block;
+        background: #D27B25;
+        border-radius: 2px;
+        color: #fff;
+        padding: 0 5px;
+        font-size: 24px;
+        height: 32px;
+        line-height: 32px;
+      }
+
+      .date {
+        span {
+          display: block;
+          font-size: 12px;
+          line-height: 20px;
+          color: #6F7480;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+// 上下架组件的disabled的状态
+.my-switch {
+  &.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+//去掉时间选择器的'此刻'按钮
+.el-date-picker {
+  background: rgba(65, 74, 93, 0.90);
+  border: 0 solid #637497;
+  box-shadow: 2px 4px 10px 0 rgba(0, 0, 0, 0.30);
+
+  .el-picker-panel__footer {
+    .el-picker-panel__link-btn:first-child {
+      display: none;
+    }
+  }
+}
+
+//  消息提示盒子样式重写
+.el-message-box {
+  width: 500px;
+  height: 261px;
+  background: rgba(42, 60, 89, 1);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  border: 0px solid rgba(99, 116, 151, 1);
+  &.simple-message {
+    height: 220px;
+  }
+
+  .el-message-box__header {
+    width: 500px;
+    height: 50px;
+    background: rgba(25, 39, 70, 1);
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 1);
+    }
+
+    .el-message-box__close.el-icon-close {
+      color: $closeBtnColor;
+      font-size: 22px;
+
+      &:hover {
+        color: $closeBtnHoverColor;
+      }
+    }
+  }
+
+  .el-message-box__status {
+    display: none;
+  }
+  .el-message-box__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    .el-message-box__input {
+      width: 80%;
+    }
+  }
+
+  .el-message-box__message {
+    text-align: center;
+
+    p {
+      font-size: 20px;
+      color: #fff;
+      padding: 40px 0 30px 0;
+      .message-notice-block {
+        font-size: 20px;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 1);
+        div {
+          &:last-child {
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .el-message-box__btns {
+    padding: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+
+    .el-button {
+      width: 100px;
+      height: 40px;
+      border: none;
+      font-weight: 400;
+      border-radius: 20px;
+      cursor: pointer;
+      &:last-child {
+        margin-right: 30px;
+        width: 100px;
+        height: 40px;
+        background: rgba(38, 146, 255, 1);
+        &:hover {
+          background: rgba(15, 112, 243, 1);
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+      &:first-child {
+        background: rgba(255, 255, 255, 1);
+        &:hover {
+          background: rgba(222, 222, 222, 1);
+        }
+        span {
+          font-size: 16px;
+          font-weight: 400;
+          color: rgba(25, 137, 250, 1);
+        }
+      }
+    }
+  }
+}
+
+//  radio标签样式重写
+.el-radio {
+  padding: 0;
+
+  .el-radio__inner {
+    border: 1px solid #3E495E;
+    background-color: transparent;
+  }
+}
+
+//  全局的checkbox的样式覆盖
+.el-checkbox__input.is-checked + .el-checkbox__label {
+  color: #fff !important;
+}
+
+.el-checkbox__input.is-disabled + span.el-checkbox__label {
+  color: #A8ABB3;
+  opacity: 0.3;
+}
+
+.el-input__icon {
+  height: 34px;
+  line-height: 34px;
+}
+
+.my-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//  全局修改radio的disabled样式
+.el-radio__input {
+  &.is-checked.is-disable {
+    .el-radio__inner {
+      background-color: transparent;
+      border: 4px solid #191D26;
+    }
+  }
+
+  .el-radio__inner {
+    &::after {
+      background: #1A2233;
+    }
+
+    .is-disable {
+      background-color: transparent;
+      border: 4px solid #191D26;
+    }
+  }
+
+  .el-radio__label {
+    font-size: 16px;
+  }
+}
+
+.el-radio__label {
+  font-size: 14px;
+  color: #A8ABB3;
+  font-weight: 400;
+}
+
+.el-radio__input.is-disabled .el-radio__inner, .el-radio__input.is-disabled.is-checked .el-radio__inner {
+  background-color: transparent;
+  border: 1px solid #3E495E;
+}
+
+.el-radio__input.is-disabled.is-checked .el-radio__inner::after {
+  background: transparent;
+}
+
+.el-checkbox__input.is-disabled .el-checkbox__inner {
+  border: 1px solid #3E495E;
+  background: transparent;
+}
+
+.el-radio:focus:not(.is-focus):not(:active):not(.is-disabled) .el-radio__inner {
+  box-shadow: none;
+}
+
+.el-input-group__append, .el-input-group__prepend {
+  background: transparent;
+  border: 1px solid #3E495E;
+}
+
+//  自定义tag标签
+.my-tags {
+  .el-tag {
+    background: #2A3040;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #6F7480;
+    height: 24px;
+    padding: 0 8px;
+    line-height: 22px;
+    margin-right: 10px;
+    border: 1px solid #2A3040;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $mainColor;
+    }
+
+    .el-tag__close.el-icon-close {
+      color: #2A3040;
+      background: #6F7480;
+
+      &:hover {
+        background: $dangerColor;
+      }
+    }
+  }
+
+  &.big {
+    .el-tag {
+      height: 34px;
+      line-height: 34px;
+    }
+  }
+}
+
+// 信息弹窗
+.el-popover.el-popper {
+  // height: 70px;
+  left: 40px;
+  background: rgba(45, 62, 89, 1);
+  border-radius: 2px;
+  border: 1px solid rgba(88, 98, 119, 1);
+  .popper__arrow {
+    display: none;
+  }
+  .pop-content {
+    color: #A8ABB3;
+    .title {
+      font-size: 12px;
+    }
+    .date-time {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      margin: 10px 0;
+      .copy-btn {
+        width: 10px;
+        height: 10px;
+        cursor: pointer;
+        margin-left: 8px;
+        .svg-icon {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}
+
+//  详情页的样式
+.text-info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+
+  .text-info-item {
+    width: 50%;
+    font-size: 16px;
+    line-height: 32px;
+    color: #A8ABB3;
+
+    .text-info-item-wrapper {
+      display: flex;
+
+      .label {
+        display: block;
+        width: 160px;
+        text-align: right;
+      }
+
+      .value {
+        text-align: left;
+        flex: 1;
+      }
+    }
+  }
+}
+
+/*整体部分*/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  // display: none;
+}
+
+/*滑动轨道*/
+::-webkit-scrollbar-track {
+  border-radius: 0px;
+  background: none;
+}
+
+/*滑块*/
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+  background-color: rgba(255, 255, 255, .75)
+}
+
+/*滑块效果*/
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .2);
+  background-color: rgba(85, 85, 85, 0.4);
+}
+
+.my-content-container {
+  padding: 20px;
+  .video-js .vjs-big-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//  相关图片的尺寸
+.gis-img {
+  width: 200px;
+  height: 200px;
+}
+
+.contract-list {
+  padding-left: 40px;
+
+  img {
+    width: 200px;
+    height: 260px;
+  }
+}
+
+.step-icon {
+  width: 64px;
+  height: 26px;
+  line-height: 26px;
+  margin-left: 30px;
+  color: #fff;
+  font-size: 18px;
+  padding-left: 12px;
+  background-image: url('../../assets/img/icon_step.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.carousel-wrapper {
+  display: flex;
+
+  .el-carousel.el-carousel--horizontal {
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+  }
+
+  .carousel-list {
+    display: flex;
+
+    .carousel-item {
+      margin-right: 20px;
+    }
+  }
+}
+
+.video-wrapper {
+  display: flex;
+  .add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 100px;
+    font-size: 20px;
+    color: #3E495E;
+    border: 1px solid #3E495E;
+    border-radius: 2px;
+    margin-left: 20px;
+    cursor: pointer;
+    &:hover {
+      color: $mainColor;
+      border-color: $mainColor;
+    }
+  ;
+  }
+}
+
+// 二维码
+.qcode-dialog {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 432px;
+  height: 390px;
+  background: rgba(12, 16, 25, 0.9);
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  padding: 34px;
+  text-align: center;
+  z-index: 30;
+
+  &.visible {
+    display: block;
+  }
+
+  .title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: rgba(168, 171, 179, 1);
+    margin-bottom: 34px;
+    text-align: center;
+  }
+
+  .delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+
+    .svg-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .hover_icon {
+      display: none;
+    }
+
+    .defatul_icon {
+      display: block;
+    }
+
+    &:hover {
+      .hover_icon {
+        display: block;
+      }
+
+      .defatul_icon {
+        display: none;
+      }
+    }
+  }
+}
+
+// form表单中的上传图片和图片轮播样式
+.img-form-item {
+  .el-form-item__content {
+    display: flex;
+    align-items: flex-end;
+    .cover-image {
+      width: 160px;
+      height: 120px;
+    }
+  }
+}
+
+// 去掉input[type=number]的默认样式
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// 选择多个指标的层级选项
+.el-select-dropdown {
+  // 分组下拉框的类名
+  .el-select-dropdown__empty {
+    padding: 6px 0;
+  }
+  &.separate-option {
+    background: rgba(33, 50, 77, 1);
+    box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(99, 116, 151, 1);
+    .el-select-group__title {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(168, 171, 179, 1);
+    }
+    .el-select-group__wrap:not(:last-of-type) {
+      padding-bottom: 0;
+    }
+    .el-select-group__wrap:not(:last-of-type)::after {
+      content: none;
+    }
+    .el-select-dropdown__wrap.el-scrollbar__wrap .el-select-dropdown__item {
+      //margin-bottom: 6px;
+      height: 20px;
+      span {
+        padding-left: 20px;
+        font-size: 12px;
+        font-weight: 400;
+        color: rgba(216, 216, 216, 1);
+      }
+      &.selected, &.hover {
+        background: rgba(15, 112, 243, 1);
+        span {
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}
+
+.el-tooltip__popper {
+  &.description-display {
+    padding: 10px;
+    width: 260px;
+    background: rgba(45, 62, 89, 1);
+    border-radius: 2px;
+    border: 1px solid rgba(88, 98, 119, 1);
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(168, 171, 179, 1);
+    line-height: 18px;
+    .popper__arrow {
+      display: none;
+    }
+    &.larger {
+      width: auto;
+    }
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px rgb(41, 53, 80) inset;
+  color: #ffffff !important;
+  -webkit-text-fill-color: #ffffff !important;
+}

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon_orange</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.2441406%" y1="15.8691406%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F3C392" offset="0%"></stop>
+            <stop stop-color="#FF8100" stop-opacity="0.799999952" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-数据概览" transform="translate(-511.000000, -843.000000)">
+            <g id="icon_orange" transform="translate(511.000000, 843.000000)">
+                <circle id="椭圆形备份-8" fill="#222A3A" cx="24" cy="24" r="24"></circle>
+                <path d="M24,11 C29.5228475,11 34,15.4771525 34,21 L34,31 L34,31 L14,31 L14,21 C14,15.4771525 18.4771525,11 24,11 Z" id="矩形备份-2" fill="url(#linearGradient-1)"></path>
+                <rect id="矩形备份-3" fill="#637497" x="12" y="33" width="24" height="4" rx="2"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

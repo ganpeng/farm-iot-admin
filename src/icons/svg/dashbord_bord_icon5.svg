@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="75px" height="54px" viewBox="0 0 75 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>icon_transport copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.6">
+        <g id="数据概览" transform="translate(-1330.000000, -91.000000)">
+            <g id="总览4" transform="translate(1208.000000, 80.000000)">
+                <g id="icon_transport-copy-2" transform="translate(125.000000, 13.000000)">
+                    <polyline id="路径-8" stroke="#2F3E5A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" points="-7.99360578e-14 8.14723292 6.04454938 8.14723292 12.1044653 0.829101562 37.8276624 0.829101562 45 8.14723292 45 39.8291016 28.2764957 39.8291016"></polyline>
+                    <circle id="椭圆形" stroke="#2F3E5A" stroke-width="4.5" cx="19.5" cy="41.3291016" r="7.5"></circle>
+                    <circle id="椭圆形备份-3" stroke="#2F3E5A" stroke-width="4.5" cx="55.5" cy="41.3291016" r="7.5"></circle>
+                    <polyline id="路径-9" stroke="#2F3E5A" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" points="45 9.82910156 54.9692103 9.82910156 69 21.0663584 69 36.8291016 61.5213587 36.8291016"></polyline>
+                    <line x1="12" y1="38.3291016" x2="0" y2="38.3291016" id="路径-10" stroke="#2F3E5A" stroke-width="4.5" stroke-linecap="round"></line>
+                    <line x1="48" y1="38.3291016" x2="45" y2="38.3291016" id="路径-10备份" stroke="#2F3E5A" stroke-width="4.5"></line>
+                    <line x1="1.16666667" y1="17.3291016" x2="19.8333333" y2="17.3291016" id="直线" stroke="#2F3E5A" stroke-width="4.5" stroke-linecap="round"></line>
+                    <line x1="3" y1="26.3291016" x2="12" y2="26.3291016" id="直线备份" stroke="#2F3E5A" stroke-width="4.5" stroke-linecap="round"></line>
+                    <polygon id="路径-11" fill="#2F3E5A" points="51 23 69 23 54.4574601 8 51 8"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

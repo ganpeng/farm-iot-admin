@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="117px" height="103px" viewBox="0 0 117 103" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>销售渠道</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.2">
+        <g id="00-首页NEW" transform="translate(-372.000000, -88.000000)">
+            <g id="销售渠道" transform="translate(374.000000, 91.000000)">
+                <polyline id="路径-2" stroke="#485777" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" points="0.5 0 27.5676345 6.4165718 41.809983 70 106.5 57.7424711 106.5 19.0041079 30.9167186 12.2283027"></polyline>
+                <path d="M46.5,70 L50.637205,79.4027386 C50.7969058,79.765695 51.1559829,80 51.55252,80 L112.5,80 L112.5,80" id="路径-3" stroke="#485777" stroke-width="5" stroke-linecap="round"></path>
+                <circle id="椭圆形" fill="#485777" cx="54" cy="92.5" r="7.5"></circle>
+                <circle id="椭圆形备份-2" fill="#485777" cx="104" cy="92.5" r="7.5"></circle>
+                <line x1="33.5" y1="32.5" x2="106.5" y2="32.4" id="路径-4" stroke="#485777" stroke-width="3"></line>
+                <line x1="37.5" y1="50.5" x2="107.5" y2="45" id="路径-5" stroke="#485777" stroke-width="3"></line>
+                <line x1="56.5" y1="15" x2="66.5" y2="65" id="路径-6" stroke="#485777" stroke-width="3"></line>
+                <line x1="82.4625" y1="15" x2="85.5375" y2="60" id="路径-7" stroke="#485777" stroke-width="3"></line>
+            </g>
+        </g>
+    </g>
+</svg>

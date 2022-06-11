@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
+<html lang="en" translate="no">
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+    <title>吉视农业物联网大数据平台</title>
+    <script type="text/javascript"
+            src="https://webapi.amap.com/maps?v=1.4.14&key=f5d094d436b0dc328885e69bf56b0ea5&plugin=AMap.DistrictLayer&plugin=AMap.Autocomplete&plugin=AMap.PlaceSearch"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
+    <link rel="stylesheet" href="https://cache.amap.com/lbs/static/main1119.css"/>
+
+    <!--<script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>-->
+</head>
+<body id="body">
+<noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+</noscript>
+<div id="app"></div>
+<!-- built files will be auto injected -->
+</body>
 </html>

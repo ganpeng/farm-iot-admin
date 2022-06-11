@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="18px" viewBox="0 0 25 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon_transport</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="00-首页NEW" transform="translate(-21.000000, -456.000000)">
+            <g id="编组" transform="translate(-3.000000, -11.000000)">
+                <g id="icon_transport" transform="translate(25.000000, 468.000000)">
+                    <polyline id="路径-8" stroke="#9FA8B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="-2.66453526e-14 2.71574431 2.01484979 2.71574431 4.03482177 0.276367188 12.6092208 0.276367188 15 2.71574431 15 13.2763672 9.42549856 13.2763672"></polyline>
+                    <circle id="椭圆形" stroke="#9FA8B8" stroke-width="1.5" cx="6.5" cy="13.7763672" r="2.5"></circle>
+                    <circle id="椭圆形备份-3" stroke="#9FA8B8" stroke-width="1.5" cx="18.5" cy="13.7763672" r="2.5"></circle>
+                    <polyline id="路径-9" stroke="#9FA8B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" points="15 3.27636719 18.3230701 3.27636719 23 7.02211947 23 12.2763672 20.5071196 12.2763672"></polyline>
+                    <line x1="4" y1="12.7763672" x2="0" y2="12.7763672" id="路径-10" stroke="#9FA8B8" stroke-width="1.5" stroke-linecap="round"></line>
+                    <line x1="16" y1="12.7763672" x2="15" y2="12.7763672" id="路径-10备份" stroke="#9FA8B8" stroke-width="1.5"></line>
+                    <line x1="0.388888889" y1="5.77636719" x2="6.61111111" y2="5.77636719" id="直线" stroke="#9FA8B8" stroke-width="1.5" stroke-linecap="round"></line>
+                    <line x1="1" y1="8.77636719" x2="4" y2="8.77636719" id="直线备份" stroke="#9FA8B8" stroke-width="1.5" stroke-linecap="round"></line>
+                    <polygon id="路径-11" fill="#9FA8B8" points="17 8.27636719 23 8.27636719 18.1524867 3.27636719 17 3.27636719"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

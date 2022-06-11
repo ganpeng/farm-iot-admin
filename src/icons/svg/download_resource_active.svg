@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="33px" height="30px" viewBox="0 0 33 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>分组 copy 6备份 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 30 33 30 33 0 0 0"></polygon>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="规范" transform="translate(-511.000000, -2955.000000)">
+            <g id="分组-copy-6备份-2" transform="translate(511.000000, 2955.000000)">
+                <path d="M14.703,21.31803 C15.1941,21.76458 15.83625,22.00848 16.5,22.0007184 C17.2155,22.0007184 17.853,21.73203 18.3045,21.32103 L25.575,14.49153 L25.5765,14.49303 C25.9635,14.13003 26.2065,13.65303 26.2065,13.12803 C26.2065,11.99703 25.119,11.07903 23.7795,11.07903 C23.73,11.07903 23.6835,11.08503 23.6355,11.08503 L23.6355,11.07003 L20.382,11.07003 L20.382,3e-05 L12.618,3e-05 L12.618,11.07003 L9.276,11.07003 L9.276,11.08053 L9.2205,11.07903 C7.881,11.07903 6.7935,11.99553 6.7935,13.12653 C6.7935,13.65303 7.0365,14.12853 7.416,14.49603 L14.703,21.31803 Z" id="Fill-1" fill="#A9A9A9"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Fill-3" fill="#A9A9A9" mask="url(#mask-2)" points="0 30 33 30 33 25.9995 0 25.9995"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

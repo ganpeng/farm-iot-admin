@@ -1,5 +1,11 @@
 # farm-iot-admin
 
+## 账号密码
+```
+13333333333
+1234c56ab
+```
+
 ## Project setup
 ```
 npm install
@@ -14,6 +20,3 @@ npm run serve
 ```
 npm run build
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

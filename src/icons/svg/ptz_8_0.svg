@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="规范" transform="translate(-243.000000, -2811.000000)">
+            <g id="分组-10" transform="translate(243.000000, 2811.000000)">
+                <rect id="矩形-copy-10" fill="#465168" x="0" y="0" width="70" height="70"></rect>
+                <path d="M43,20 C44.1045695,20 45,20.8954305 45,22 C45,23.1045695 44.1045695,24 43,24 L19,24 L19,48 C19,49.1045695 18.1045695,50 17,50 C15.8954305,50 15,49.1045695 15,48 L15,22 C15,20.8954305 15.8954305,20 17,20 L43,20 Z" id="右下-正常-copy" fill="#1A2233" transform="translate(30.000000, 35.000000) rotate(-180.000000) translate(-30.000000, -35.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

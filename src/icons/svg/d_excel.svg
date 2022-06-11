@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="34px" viewBox="0 0 48 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>btn_excel</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-农场-成员管理-编辑备份" transform="translate(-1353.000000, -153.000000)">
+            <g id="btn_excel" transform="translate(1353.000000, 153.000000)">
+                <rect id="矩形备份" fill="#2E384D" x="0" y="0" width="48" height="34"></rect>
+                <g id="icon_xcel" transform="translate(12.000000, 6.000000)">
+                    <g id="矩形_117" transform="translate(3.000000, 0.000000)">
+                        <rect id="矩形" fill-rule="nonzero" x="0" y="0" width="17" height="20.5241707" rx="3"></rect>
+                        <rect id="矩形" stroke="#117E43" x="0.25" y="0.256097561" width="16.5" height="20.0119756" rx="2.5"></rect>
+                    </g>
+                    <g id="矩形_119" transform="translate(0.000000, 4.000000)">
+                        <rect id="矩形" fill="#2E384D" fill-rule="nonzero" x="0" y="0" width="10" height="10" rx="2"></rect>
+                        <rect id="矩形" stroke="#117E43" x="0.25" y="0.25" width="9.5" height="9.5" rx="1.5"></rect>
+                    </g>
+                    <polygon id="联合_16" fill="#138046" fill-rule="nonzero" points="6.69324209 12 4.99948674 9.83438155 3.30573139 12 2.04516681 12 4.37023097 9.028826 2 6 3.30470488 6 5.02155689 8.19444444 6.73789564 6 7.99794696 6 5.65337896 9 8 12"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

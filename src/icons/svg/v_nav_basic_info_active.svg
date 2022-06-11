@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="30px" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon_info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="02-农场-可视农场-基本信息" transform="translate(-30.000000, -152.000000)" stroke="#FFFFFF" stroke-width="1.8">
+            <g id="icon_info" transform="translate(31.000000, 153.000000)">
+                <path d="M2,0 L22,0 C23.1045695,-2.02906125e-16 24,0.8954305 24,2 L24,20.7092448 L24,20.7092448 L16.3154297,28 L2,28 C0.8954305,28 2.09738034e-15,27.1045695 0,26 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="矩形" stroke-linejoin="round"></path>
+                <line x1="5" y1="7.5" x2="16" y2="7.5" id="直线-5" stroke-linecap="round"></line>
+                <line x1="5" y1="12.5" x2="16" y2="12.5" id="直线-5备份" stroke-linecap="round"></line>
+                <line x1="5" y1="17.5" x2="16" y2="17.5" id="直线-5备份-2" stroke-linecap="round"></line>
+            </g>
+        </g>
+    </g>
+</svg>
