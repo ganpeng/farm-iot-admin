@@ -13,7 +13,7 @@ Vue.use(Router);
 
 export const constantRouterMap = [{
   path: '/',
-  alias: '/login',
+  alias: '/dashboard',
   component: () => import('@/views/login/Login'),
   name: 'Login'
 }, {
@@ -125,7 +125,7 @@ export const constantRouterMap = [{
         activeMenu: '/version-manage/version-list'
       },
     },
-    // wangshuo  add  2021.04.12 start 
+    // wangshuo  add  2021.04.12 start
     // 管理APP版本
     {
       path: '/version-manage/app-version',
@@ -177,7 +177,7 @@ export const constantRouterMap = [{
         noCache: true,
         activeMenu: '/version-manage/app-version'
       },
-    },    
+    },
     // 种植模型
     {
       path: '/plant-manage/plant-model',
@@ -190,8 +190,8 @@ export const constantRouterMap = [{
         noCache: true,
         activeMenu: '/plant-manage/plant-model'
       }
-    },   
-    // wangshuo  add  2021.04.12 end     
+    },
+    // wangshuo  add  2021.04.12 end
     // 用户列表
     {
       path: '/user-manage/user-list',

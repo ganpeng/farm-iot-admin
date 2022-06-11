@@ -3,6 +3,14 @@ import _ from 'lodash';
 import {DEFAULT_LIST, DEFAULT_PAGINATION} from '@/util/constants';
 import service from '@/service';
 
+const defaultTracing = {
+  name: '',
+  date: '',
+  imageUrl: '',
+  videoUrl: '',
+  detailList: []
+};
+
 const defaultSearchFiled = {
   keyword: '',
   categoryId: '', // 分类
@@ -35,13 +43,6 @@ const defaultCommodity = {
   }) // 溯源信息
 };
 
-const defaultTracing = {
-  name: '',
-  date: '',
-  imageUrl: '',
-  videoUrl: '',
-  detailList: []
-};
 
 const state = {
   searchField: _.cloneDeep(defaultSearchFiled),
