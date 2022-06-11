@@ -10,7 +10,7 @@ let service = axios.create({
   headers: {}
 });
 
-service.defaults.baseURL = '/admin';
+service.defaults.baseURL = `${process.env.VUE_APP_API_ROOT}/admin`;
 
 service.interceptors.request.use(
   config => {
