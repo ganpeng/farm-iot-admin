@@ -15,7 +15,7 @@ export const constantRouterMap = [{
   path: '/',
   alias: '/dashboard',
   component: () => import('@/views/login/Login'),
-  name: 'Login'
+  name: 'Login',
 }, {
   path: '/404',
   component: () => import('@/views/error/404'),
